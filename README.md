@@ -32,6 +32,8 @@ Basics of Sudo Configuration.
        
        Once the user is authenticated, the public key will be appended to the remote user authorized_keys file and connection will be closed.
        
+       
+       
    04. Login to your server using SSH keys :
     
        After completing the steps above you should be able log in to the remote server without being prompted for a password.
@@ -59,3 +61,17 @@ Basics of Sudo Configuration.
        On Ubuntu or Debian servers, run the following command:
        
        sudo systemctl restart ssh
+
+-> Execute ALL sudo commands without password For particular SSH_USER :
+
+   Type the following command as root user:
+   
+   visudo
+   
+   Or if you have sudo access and want to grant another user permission, try:
+   
+   sudo visudo
+   
+   Append the following entry to run ALL command without a password for a SSH_USER :
+   
+   SSH_USER ALL=(ALL) NOPASSWD:ALL
