@@ -39,11 +39,11 @@ Basics of Sudo Configuration.
        If everything went well, you will be logged in immediately.
        
    05. Open the SSH configuration file /etc/ssh/sshd_config, search for the following directives and modify as it follows: 
-       PermitRootLogin no 
-       PubkeyAuthentication yes 
-       PasswordAuthentication no 
-       ChallengeResponseAuthentication no 
-       UsePAM no 
+       PermitRootLogin no,
+       PubkeyAuthentication yes, 
+       PasswordAuthentication no, 
+       ChallengeResponseAuthentication no, 
+       UsePAM no
        
    06. Once you are done save the file and restart the SSH service.
 
