@@ -3,24 +3,24 @@ Basics of Sudo Configuration.
 
 -> Setup SSH Passwordless Login Using Publickey Authentication :
    
-   01. Check for existing SSH key pair :
+      01. Check for existing SSH key pair :
 
-       Before generating a new SSH key pair first check if you already have an SSH key on your client machine because you don’t want to overwrite your          existing keys.
+          Before generating a new SSH key pair first check if you already have an SSH key on your client machine because you don’t want to overwrite your          existing keys.
 
-       Run the following ls command to see if existing SSH keys are present:
-       
-       ls -al ~/.ssh/id_*.pub
-       
-       If there are existing keys, you can either use those and skip the next step or backup up the old keys and generate a new one.
+          Run the following ls command to see if existing SSH keys are present:
+
+          ls -al ~/.ssh/id_*.pub
+
+          If there are existing keys, you can either use those and skip the next step or backup up the old keys and generate a new one.
     
-   02. Generate a new SSH key pair :
-       
-       The following command will generate a new 4096 bits SSH key pair:
-       
-       ssh-keygen -t rsa -b 4096
-       
-       To be sure that the SSH keys are generated you can list your new private and public keys with:
-       ls ~/.ssh/id_*
+      02. Generate a new SSH key pair :
+
+          The following command will generate a new 4096 bits SSH key pair:
+
+          ssh-keygen -t rsa -b 4096
+
+          To be sure that the SSH keys are generated you can list your new private and public keys with:
+          ls ~/.ssh/id_*
        
    03. Copy the public key :
    
